@@ -7,5 +7,5 @@ else
 fi
 DOCKER_PATH=$DOCKER_USER/$DOCKERHUB_REPO:$TAG
 DOCKER_TAG=$DOCKERHUB_REPO:$TAG
-docker build --file Dockerfile --tag $DOCKER_TAG .
+docker build --file Dockerfile --tag $DOCKER_PATH .
 docker push $DOCKER_PATH
