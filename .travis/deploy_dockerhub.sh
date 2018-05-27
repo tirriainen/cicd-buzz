@@ -6,5 +6,6 @@ else
     TAG="$TRAVIS_BRANCH"
 fi
 DOCKER_PATH=$DOCKER_USER/$DOCKERHUB_REPO:$TAG
-docker build --file Dockerfile --tag $DOCKER_PATH .
+DOCKER_TAG=$DOCKERHUB_REPO:$TAG
+docker build --file Dockerfile --tag $DOCKER_TAG .
 docker push $DOCKER_PATH
